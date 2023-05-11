@@ -1,0 +1,28 @@
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/footer.css' %}">
+{% endblock %}
+
+<footer class="container p-4 rounded">
+  <div class="d-flex justify-content-between align-items-center">
+
+    <div class="d-flex flex-column col-md-4 copyright d-flex justify-content-center">
+      <p>Desarrollado por: </p>
+      <ul>
+        <li>
+          <a href="https://github.com/josgarboh" target="_blank">José Ignacio García Bohorquez</a>
+        </li>
+        <li>
+          <a href="https://github.com/IsmaelP19" target="_blank">Ismael Pérez Ortiz</a>
+        </li>
+        <li>
+          <a href="https://github.com/migromarj" target="_blank">Miguel Romero Arjona</a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="col-md-4 d-flex justify-content-center">
+       <a href="https://github.com/BrandFinder/BrandFinder-App" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+  </div>
+</footer>

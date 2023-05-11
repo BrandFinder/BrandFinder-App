@@ -1,0 +1,40 @@
+{% extends 'master.html' %}
+
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/crispy_form.css' %}">
+{% endblock %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+
+{% if messages %}
+<div class="row">
+    {% for message in messages %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="main">
+  <h1>Página de inicio</h1>
+  <div class="crispy-wrapper">
+    <div class="crispy-layout">
+      <div class="crispy-container">
+        <form method="POST" action="" class="crispy-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            {{ form.errors }}
+            <p class="required-fields-crispy">Los campos marcados con * son obligatorios.</p>
+            <button class="btn btn-success" id="id_submit_button" type="submit">Detectar marca</button>
+          </form>
+      </div>
+    </div>
+</div>
+{% endblock %}

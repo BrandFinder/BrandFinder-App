@@ -1,0 +1,2 @@
+Django
+crispy-bootstrap5==0.7

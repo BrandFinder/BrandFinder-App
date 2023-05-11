@@ -1,0 +1,58 @@
+/* css associated with the crispy_form component */
+
+.crispy-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: 2rem;
+    z-index: 5;
+    background-color: #fff;
+    /* max-width: 1000px; */
+    padding: 10px;
+}
+
+.title {
+    text-align: left;
+    margin-left: 5%;
+}
+
+hr.line-break {
+    border: 1px solid #FAAB78;
+    border-radius: 5px;
+    padding: 2px;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    background-color: #FAAB78;
+    width: 92%;
+    opacity: initial;
+}
+
+.crispy-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.crispy-container{
+    max-width: 100%;
+    width: 100%;
+}
+
+.crispy-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorlist{
+    display: none;
+}
+
+span.helptext{
+    display: none;
+}
+
+.required-fields-crispy{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}

@@ -1,0 +1,43 @@
+/* Navbar css */
+
+.navbar{
+  background-color: #ecf7db;
+  z-index: 15;
+}
+
+.navbar-brand{
+  margin-left: 10px;
+}
+
+.navbar-logo{
+  width: 65px;
+  margin-left: 10px;
+}
+  
+.nav-link{
+  font-size: 1.1rem;
+}
+
+.navbar-toggler{
+  margin-right: 10px;
+  border: 1px solid #000000;
+}
+
+.buttons-line{
+  display: none;
+}
+
+.auth-buttons{
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 992px){
+  .nav-item{
+      margin: 0 auto;
+  }
+
+  .buttons-line{
+      display: block;
+  }
+}

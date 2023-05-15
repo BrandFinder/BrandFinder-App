@@ -8,7 +8,7 @@
     z-index: 5;
     background-color: #fff;
     border-radius: 20px;
-    padding: 10px;
+    padding: 2rem;
 }
 
 .title {
@@ -57,3 +57,12 @@ span.helptext{
     margin-bottom: 20px;
     font-weight: 600;
 }
+
+@media(max-width: 768px) {
+    .crispy-wrapper {
+      max-width: 100%;
+      border-radius: 0;
+    }
+  
+    
+  }

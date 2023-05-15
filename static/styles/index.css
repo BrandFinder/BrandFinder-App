@@ -55,3 +55,16 @@
 .max {
   font-size: 3rem;
 }
+
+@media(max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .img-fluid {
+    max-width: 250px;
+  }
+
+
+}

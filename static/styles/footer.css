@@ -16,3 +16,9 @@ a {
   color: #000;
   text-decoration: none;
 }
+
+@media (max-width: 767px) {
+  .container {
+    border-radius: 0 !important;
+  }
+}

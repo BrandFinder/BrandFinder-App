@@ -5,6 +5,7 @@
 {% block head %}
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'styles/crispy_form.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
 {% endblock %}
 
 {% block title %} Inicio {% endblock %}
@@ -23,7 +24,10 @@
 {% endif %}
 
 <div class="main">
-  <h1>Página de inicio</h1>
+    <div>
+      <h1 class="title max">BrandFinder</h1>
+      <h2 class="title">Encuentra la marca de coche de una foto</h2>
+    </div>
   <div class="crispy-wrapper">
     <div class="crispy-layout">
       <div class="crispy-container">
@@ -36,5 +40,53 @@
           </form>
       </div>
     </div>
+  </div>
+  {% if image %}    
+  <div class="wrapper">
+    <div class="results">
+      <div class="images">
+        <div class="image">
+          <span class="title reg">Imagen proporcionada</span>
+          <img src="{{ image }}" alt="Imagen subida" class="img-fluid">
+        </div>
+        <div class="image reg">
+          <span class="title">Imagen resultante</span>
+          <img src="{{ image }}" alt="Imagen resultante" class="img-fluid">
+        </div>
+      </div>
+      <span class="title reg">
+        {% if brand != 'none' %}
+        Se ha detectado la marca {{ brand }} en la imagen proporcionada.
+        {% else %}
+        No se ha podido detectar correctamente una marca en la imagen proporcionada.
+        {% endif %}
+      </p>
+    </div>
+  </div>
+  {% endif %}
 </div>
+
+<script type="text/javascript">
+  let submitBtn = document.getElementById("id_submit_button");
+  let colorInput = document.getElementById("id_color");
+  let photoInput = document.getElementById("id_image");
+
+  photoInput.addEventListener("change", function() {
+    if (colorInput.value != "default") {
+      submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
+    }
+  });
+
+  colorInput.addEventListener("change", function() {
+    if (colorInput.value != "default") {
+      submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
+    }
+  });
+
+</script>
+
 {% endblock %}

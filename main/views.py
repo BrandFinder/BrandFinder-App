@@ -12,11 +12,23 @@ def index(request):
         form = SearchBrandForm(request.POST, request.FILES)
         if form.is_valid():
             image = form.cleaned_data['image']
+            color = form.cleaned_data['color']
             fs = FileSystemStorage()
-            fs.save(image.name, image)
-            # call the algorithm with the image saved and the color
+            filename = fs.save(image.name, image)
+            uploaded_file_url = fs.url(filename)
+            # brand = algorithm(image, color) <-- se le pasa la red neuronal, devolverá 'none' si no hay algún resultado claro
+            context = {
+                'image': uploaded_file_url,
+                'color': color,
+                'brand': 'opel',
+                'form': form
+            }
+
 
     else: 
         form = SearchBrandForm()
+        context = {
+            'form': form
+        }
 
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'index.html', context)

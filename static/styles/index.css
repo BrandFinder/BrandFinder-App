@@ -1,0 +1,57 @@
+.img-fluid {
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.wrapper {
+  width: 70%;
+  display: flex;
+  margin:auto;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.reg {
+  font-size: 1.5rem;
+}
+
+.max {
+  font-size: 3rem;
+}

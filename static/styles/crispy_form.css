@@ -1,12 +1,13 @@
 /* css associated with the crispy_form component */
 
 .crispy-wrapper {
+    max-width: 80%;
+    margin: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    margin-inline: 2rem;
     z-index: 5;
     background-color: #fff;
-    /* max-width: 1000px; */
+    border-radius: 20px;
     padding: 10px;
 }
 

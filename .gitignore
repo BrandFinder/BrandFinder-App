@@ -13,6 +13,10 @@ media
 
 ./static/img
 
+# Neuronal network model
+
+*.h5
+
 # Python #
 *.py[cod]
 *$py.class

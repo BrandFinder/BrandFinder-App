@@ -1,2 +1,8 @@
 Django
 crispy-bootstrap5==0.7
+python-decouple==3.8
+Pillow==9.5.0
+opencv-python==4.7.0.72
+imutils==0.5.4
+keras == 2.12.0
+tensorflow == 2.12.0

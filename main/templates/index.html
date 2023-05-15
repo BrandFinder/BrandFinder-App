@@ -26,7 +26,7 @@
 <div class="main">
     <div>
       <h1 class="title max">BrandFinder</h1>
-      <h2 class="title">Encuentra la marca de coche de una foto</h2>
+      <h2 class="title">Detecta la marca de un coche en una foto</h2>
     </div>
   <div class="crispy-wrapper">
     <div class="crispy-layout">
@@ -51,11 +51,15 @@
         </div>
         <div class="image reg">
           <span class="title">Imagen resultante</span>
-          <img src="{{ image }}" alt="Imagen resultante" class="img-fluid">
+          {% if brand_image %}
+          <img src="{{ brand_image }}" alt="Imagen resultante" class="img-fluid">
+          {% else %}
+          <p>No se ha podido detectar una marca en la imagen proporcionada.</p>
+          {% endif %}
         </div>
       </div>
       <span class="title reg">
-        {% if brand != 'none' %}
+        {% if brand %}
         Se ha detectado la marca {{ brand }} en la imagen proporcionada.
         {% else %}
         No se ha podido detectar correctamente una marca en la imagen proporcionada.

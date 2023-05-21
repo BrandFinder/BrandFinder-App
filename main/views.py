@@ -29,12 +29,13 @@ def index(request):
                     brand.save(brand_url)
 
                     brand_to_predict = Image.open(brand_url)
-                    brand_to_predict = brand_to_predict.resize((240, 192))
+                    brand_to_predict = brand_to_predict.resize((240, 194))
                     img_array = np.array(brand_to_predict)
                     img_array = img_array[:, :, :3]
                     img_array = np.expand_dims(img_array, axis=0)
                     model = keras.models.load_model('model.h5')
                     predictions = model.predict(img_array, verbose=0)
+                    print(predictions)
                     predicted_class = np.argmax(predictions)
 
                     brand_title = ["Hyundai","Lexus","Mazda","Mercedes","Opel","Skoda","Toyota","Volkswagen"][predicted_class]
